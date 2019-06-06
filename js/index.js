@@ -70,7 +70,11 @@ let topText = document.querySelectorAll('.top-content p');
 topText[0].textContent = siteContent['main-content']['features-content'];
 topText[1].textContent = siteContent['main-content']['about-content'];
 
+let bottomHeaders = document.querySelectorAll('.bottom-content h4');
+bottomHeaders[0].textContent = siteContent['main-content']['services-h4'];
+bottomHeaders[1].textContent = siteContent['main-content']['product-h4'];
 
-
-
+let bottomText = document.querySelectorAll('.bottom-content p');
+bottomText[0].textContent = siteContent['main-content']['services-content'];
+bottomText[1].textContent = siteContent['main-content']['product-content'];
 
