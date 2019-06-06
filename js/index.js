@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM Is Awesome",
+    "h1": "DOM<br>Is<br>Awesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -57,7 +57,7 @@ navAnchors[4].textContent = siteContent['nav']['nav-item-5'];
 navAnchors[5].textContent = siteContent['nav']['nav-item-6'];
 
 let ctaHeader = document.querySelector('.cta-text h1');
-ctaHeader.textContent = siteContent['cta']['h1'];
+ctaHeader.innerHTML = siteContent['cta']['h1'];
 
 let ctaButton = document.querySelector('.cta-text button');
 ctaButton.textContent = siteContent['cta']['button'];
@@ -102,3 +102,11 @@ navigation.appendChild(appendAnchor);
 let prependAnchor = document.createElement('a');
 prependAnchor.textContent = `Prepended`;
 navigation.prepend(prependAnchor);
+
+
+
+
+
+
+
+
