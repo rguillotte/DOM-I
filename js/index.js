@@ -89,3 +89,16 @@ contactLines[2].textContent = siteContent['contact']['email'];
 let footer = document.querySelector('footer p');
 footer.textContent = siteContent['footer']['copyright'];
 
+navAnchors.forEach((item) =>{
+  item.style.color = 'green';
+})
+
+let navigation = document.querySelector('nav');
+
+let appendAnchor = document.createElement('a');
+appendAnchor.textContent = `Appended`;
+navigation.appendChild(appendAnchor);
+
+let prependAnchor = document.createElement('a');
+prependAnchor.textContent = `Prepended`;
+navigation.prepend(prependAnchor);
