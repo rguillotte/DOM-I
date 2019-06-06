@@ -62,6 +62,15 @@ ctaHeader.textContent = siteContent['cta']['h1'];
 let ctaButton = document.querySelector('.cta-text button');
 ctaButton.textContent = siteContent['cta']['button'];
 
+let topHeaders = document.querySelectorAll('.top-content h4');
+topHeaders[0].textContent = siteContent['main-content']['features-h4'];
+topHeaders[1].textContent = siteContent['main-content']['about-h4'];
+
+let topText = document.querySelectorAll('.top-content p');
+topText[0].textContent = siteContent['main-content']['features-content'];
+topText[1].textContent = siteContent['main-content']['about-content'];
+
+
 
 
 
