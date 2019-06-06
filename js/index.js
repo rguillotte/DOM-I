@@ -48,6 +48,11 @@ let middleImg = document.getElementById("middle-img");
 middleImg.src = "img/mid-page-accent.jpg";
 
 let navAnchors = document.querySelectorAll('a');
+let navArray = Object.values(siteContent.nav);
+
+// for(let i = 0; i < navAnchors; i++){
+//   navAnchors[i].textContent = navArray[i];
+// }
 
 navAnchors[0].textContent = siteContent['nav']['nav-item-1'];
 navAnchors[1].textContent = siteContent['nav']['nav-item-2'];
@@ -98,10 +103,12 @@ let navigation = document.querySelector('nav');
 let appendAnchor = document.createElement('a');
 appendAnchor.textContent = `Appended`;
 navigation.appendChild(appendAnchor);
+appendAnchor.style.color = 'green';
 
 let prependAnchor = document.createElement('a');
 prependAnchor.textContent = `Prepended`;
 navigation.prepend(prependAnchor);
+prependAnchor.style.color = 'green';
 
 
 
