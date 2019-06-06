@@ -50,16 +50,20 @@ middleImg.src = "img/mid-page-accent.jpg";
 let navAnchors = document.querySelectorAll('a');
 let navArray = Object.values(siteContent.nav);
 
+navAnchors.forEach((item, i) =>{
+  item.textContent = navArray[i];
+})
+
 // for(let i = 0; i < navAnchors; i++){
 //   navAnchors[i].textContent = navArray[i];
 // }
 
-navAnchors[0].textContent = siteContent['nav']['nav-item-1'];
-navAnchors[1].textContent = siteContent['nav']['nav-item-2'];
-navAnchors[2].textContent = siteContent['nav']['nav-item-3'];
-navAnchors[3].textContent = siteContent['nav']['nav-item-4'];
-navAnchors[4].textContent = siteContent['nav']['nav-item-5'];
-navAnchors[5].textContent = siteContent['nav']['nav-item-6'];
+// navAnchors[0].textContent = siteContent['nav']['nav-item-1'];
+// navAnchors[1].textContent = siteContent['nav']['nav-item-2'];
+// navAnchors[2].textContent = siteContent['nav']['nav-item-3'];
+// navAnchors[3].textContent = siteContent['nav']['nav-item-4'];
+// navAnchors[4].textContent = siteContent['nav']['nav-item-5'];
+// navAnchors[5].textContent = siteContent['nav']['nav-item-6'];
 
 let ctaHeader = document.querySelector('.cta-text h1');
 ctaHeader.innerHTML = siteContent['cta']['h1'];
