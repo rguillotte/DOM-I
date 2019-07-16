@@ -98,6 +98,17 @@ contactLines[2].textContent = siteContent['contact']['email'];
 let footer = document.querySelector('footer p');
 footer.textContent = siteContent['footer']['copyright'];
 
+let footerDiv = document.querySelector('footer');
+
+footerDiv.style.display = 'flex';
+footerDiv.style.justifyContent = 'space-evenly';
+
+let bgBtn = document.createElement('button');
+
+bgBtn.textContent = 'Change Background!';
+
+footer.appendChild(bgBtn);
+
 navAnchors.forEach((item) =>{
   item.style.color = 'green';
 })
@@ -108,11 +119,27 @@ let appendAnchor = document.createElement('a');
 appendAnchor.textContent = `Appended`;
 navigation.appendChild(appendAnchor);
 appendAnchor.style.color = 'green';
+appendAnchor.style.cursor = 'pointer';
 
 let prependAnchor = document.createElement('a');
 prependAnchor.textContent = `Prepended`;
 navigation.prepend(prependAnchor);
 prependAnchor.style.color = 'green';
+prependAnchor.style.cursor = 'pointer';
+
+let container = document.querySelector('body');
+
+function getRandomColor() {
+  function c() {
+    var hex = Math.floor(Math.random()*256).toString(16);
+    return ("0"+String(hex)).substr(-2);
+  }
+  return "#"+c()+c()+c();
+};
+
+bgBtn.addEventListener('click', (e)=>{
+  container.style.backgroundColor = getRandomColor();
+})
 
 
 
